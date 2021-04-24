@@ -1,0 +1,40 @@
+1) Generate_phased_output
+
+Generate phase voltage Vun and space vector for a period of 0.3s
+Sampling time:1MHz
+
+2) STATE
+
+At each instantaneous time based on carrier frequency,
+
+At each carrier freq time period, we check the state of where the vector is.
+
+(Note: Do not confuse sampling time with frequency. Sampling freq is much larger than carrier frequency)
+
+3) switch_states
+
+Determine the on-off states for each inverter in the 3 phase inverter, based on which sector the SVM is in, the switching states will be called.
+
+4) State_vector
+
+It is to get the left vector and right vector voltage within the sector (Complex value)
+
+5) plot_phasors
+
+At each sampling period, the value of Vun is plotted in a 1-D array and time axis is also appended in a 1-D array accordingly.
+
+Vun is Y-axis
+
+T is x-axis with 1microsecond division
+
+
+6) plotSpectrum (FFT)
+
+7) plotSpectrum (FFT zoom)
+
+8) time_move
+
+tr, tl and tz respectively for each vector and angle readjustment will be done automatically within the function
+
+9) Main function where you input the fundamental frequency, Vin, modulation index and starting angle.
+Adjustment will be done accordingly.
